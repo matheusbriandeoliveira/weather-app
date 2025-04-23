@@ -73,7 +73,7 @@ const Weather = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center text-tx-secundary p-6 md:place-self-center md:p-12 md:rounded-lg bg-[linear-gradient(45deg,_#2f4680,_#500ae4)]">
+    <div className="flex flex-col justify-center items-center text-tx-secundary p-6 md:place-self-center md:p-12 rounded-lg bg-[linear-gradient(45deg,_#2f4680,_#500ae4)]">
       {/* search-bar */}
       <div className="flex gap-3">
         <input
@@ -93,10 +93,12 @@ const Weather = () => {
       {weatherData && (
         <>
           <img className="w-42 m-8" src={weatherData.icon} alt="Clima" />
-          <p className="text-7xl leading-none">{weatherData.temperature}°c</p>
-          <p className="text-4xl">{weatherData.location}</p>
+          <p className="leading-none text-5xl md:text-7xl ">
+            {weatherData.temperature}°c
+          </p>
+          <p className="text-2xl md:text-4xl">{weatherData.location}</p>
 
-          <div className="w-full mt-10 flex justify-between text-2xl">
+          <div className="w-full text-xl mt-10 flex justify-between md:text-2xl">
             <div className="flex items-start gap-4">
               <img className="w-8" src={humidity_icon} alt="Umidade" />
               <div className="flex flex-col leading-none">
