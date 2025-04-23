@@ -73,17 +73,17 @@ const Weather = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center text-tx-secundary place-self-center p-12 rounded-lg bg-[linear-gradient(45deg,_#2f4680,_#500ae4)]">
+    <div className="flex flex-col justify-center items-center text-tx-secundary p-6 md:place-self-center md:p-12 md:rounded-lg bg-[linear-gradient(45deg,_#2f4680,_#500ae4)]">
       {/* search-bar */}
       <div className="flex gap-3">
         <input
           ref={inputRef}
-          className="bg-primary text-tx-primary text-2xl pl-6 h-13 border-none outline-none rounded-4xl"
+          className="bg-primary text-tx-primary text-lg pl-4 border-none outline-none rounded-3xl md:text-2xl md:pl-6 md:h-13   md:rounded-4xl"
           type="text"
           placeholder="Pesquisar cidade"
         />
         <img
-          className="w-12 p-4 rounded-3xl bg-primary cursor-pointer"
+          className="bg-primary w-10 p-3 rounded-3xl md:w-12 md:p-4   cursor-pointer"
           src={search_icon}
           alt="Pesquisar"
           onClick={() => search(inputRef.current?.value || "")}
